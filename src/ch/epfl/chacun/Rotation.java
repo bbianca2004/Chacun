@@ -19,14 +19,14 @@ public enum Rotation {
     }
     public Rotation negated()
     {
-       return ALL.get((this.ordinal() + 2) % COUNT);
+        return ALL.get((COUNT - this.ordinal()) % COUNT);//return ALL.get((this.ordinal() + 2) % COUNT);
     }
     public int quarterTurnsCW()
     {
-        return (this.ordinal() - 1);
+        return this.ordinal();
     }
     public int degreesCW()
     {
-        return (this.ordinal() - 1) * 90;
+        return this.ordinal()  * 90;
     }
 }

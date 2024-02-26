@@ -1,6 +1,6 @@
 package ch.epfl.chacun;
 import java.util.List;
-public sealed interface Zone permits Lake, Meadow, River, Zone.Forest, Zone.Meadow, Zone.Water {
+public sealed interface Zone permits Zone.Forest, Zone.Meadow, Zone.Water {
     public static int tileId(int zoneId){
         return zoneId / 10;
     }

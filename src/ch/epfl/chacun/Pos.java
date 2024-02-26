@@ -11,10 +11,10 @@ public record Pos(int x, int y) {
     {
         return switch(direction)
         {
-            case N -> translated(0, 1);
+            case N -> translated(0, -1);//nici eu nu inteleg de ce e asa, dar uita te la teste
             case E -> translated(1, 0);
             case W -> translated(-1, 0);
-            case S -> translated(0, -1);
+            case S -> translated(0, 1);//acelasi lucru
         };
     }
 }
